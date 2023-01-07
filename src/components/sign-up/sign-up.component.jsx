@@ -5,6 +5,8 @@ import FormInput from '../../components/form-input/form-input.component';
 import Button from '../../components/button/button.component'
 import './sign-up.styles.scss';
 
+import {UserContext} from '../../contexts/user.context'
+
 const defaultFormFields = {
     displayName: '',
     email: '',
@@ -26,7 +28,7 @@ const SignUp = () => {
             return
         }
         try{
-            const {user} = await createAuthUserWithEmailAndPassword(email, password);
+            const {user} = await createAuthUserWithEmailAndPassword(email, password)
             await createUserDocumentFromAuth(user, {displayName, email})
             
 
