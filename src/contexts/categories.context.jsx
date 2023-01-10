@@ -61,13 +61,13 @@ const PRODUCTS = [
 ]
   
 
-export const ProductsContext = createContext({
-    products: [],
+export const CategoriesContext = createContext({
+    categoriesMap: [],
 
 })
 
-export const ProductsProvider = ({children}) => {
-    const [products, setProducts] = useState(PRODUCTS)
+export const CategoriesProvider = ({children}) => {
+    const [CategoriesMap, setCategoriesMap] = useState({})
     const value = {products};
     // just run once
     // useEffect(()=> {
@@ -77,6 +77,7 @@ export const ProductsProvider = ({children}) => {
     useEffect(() => {
         const getCategoriesMap = async () => {
             const categoryMap = await getCategoriesAndDocuments()
+            setCategoriesMap(categoryMap)
         }
         getCategoriesMap()
     }, [] )
