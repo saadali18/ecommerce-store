@@ -1,6 +1,6 @@
 import {initializeApp} from "firebase/app";
 import { getAuth, signInWithRedirect, signInWithPopup, GoogleAuthProvider, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, onAuthStateChanged } from 'firebase/auth';
-import {getFirestore, doc, setDoc, getDoc, collection, writBatch, query, getDocs} from 'firebase/firestore'
+import {getFirestore, doc, setDoc, getDoc, collection, writBatch, query, getDocs, writeBatch} from 'firebase/firestore'
 
 const firebaseConfig = {
     apiKey: "AIzaSyDeIwrJnijounZaql1Jd43cFZPs6JK0UFg",
@@ -26,7 +26,7 @@ export const db = getFirestore();
 
 export const addCollectionAndDocuments = async (collectionkey, objectsToAdd) => {
     const collectionRef = collection(db, collectionkey);
-    const batch = writBatch(db);
+    const batch = writeBatch(db)
 
     objectsToAdd.forEach((object) => {
         const docRef = doc(collectionRef, object.title.toLowerCase())
