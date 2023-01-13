@@ -27,7 +27,7 @@ export const BaseButton = styled.button`
 
 `
 
-export const BlueButton = styled(BaseButton).button`
+export const BlueButton = styled(BaseButton)`
   background-color: #4285f4;
   color: white;
 
@@ -37,7 +37,7 @@ export const BlueButton = styled(BaseButton).button`
   }
 `
 
-export const WhiteButton = styled(BaseButton).button`
+export const WhiteButton = styled(BaseButton)`
   background-color: white;
   color: black;
   border: 1px solid black;
@@ -47,5 +47,5 @@ export const WhiteButton = styled(BaseButton).button`
     color: white;
     border: none;
   }
-`
+`  
   

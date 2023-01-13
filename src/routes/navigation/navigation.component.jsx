@@ -1,5 +1,5 @@
 import { Fragment, useContext } from 'react';
-import {Outlet, Link} from 'react-router-dom';
+import {Outlet} from 'react-router-dom';
 
 import { ReactComponent as Logo } from '../../assets/logo.svg';
 import {UserContext} from '../../contexts/user.context'
@@ -38,7 +38,7 @@ const Navigation = () => {
             <CartIcon />
           </NavLinks>
           {isCartOpen && <CartDropdown />}
-        </NavigationContainer>
+        </NavigationContainer> 
       <Outlet />
       </Fragment>
     )

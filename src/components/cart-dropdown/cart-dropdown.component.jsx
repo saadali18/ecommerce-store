@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 import { CartContext } from '../../contexts/cart.context';
-import Button from '../button/button.component';
+import {Button} from '../button/button.component';
 import CartItem from '../../components/cart-item/cart-item.component'
 import { useNavigate } from 'react-router-dom';
 
@@ -15,7 +15,7 @@ const CartDropdown = () => {
 
     return (
         <CartDropdownContainer>
-            <cartItems>
+            <CartItems>
 
                 {
                     cartItems.length ? (cartItems.map((item) => (
@@ -24,7 +24,7 @@ const CartDropdown = () => {
                         <EmptyMessage>Your cart is empty</EmptyMessage>
                     )
                 }
-            </cartItems>
+            </CartItems>
             <Button onClick={goToCheckoutHandler}>CHECKOUT</Button>
         </CartDropdownContainer> 
     )

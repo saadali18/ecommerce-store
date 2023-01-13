@@ -1,16 +1,15 @@
-import Button from '../button/button.component';
-import './cart-item.styles.scss'
+import {CartItemContainer, Image, ItemDetails } from './cart-item.styles'
 
 const CartItem = ({cartItem}) => {
     const {name, quantity, imageUrl, price} = cartItem 
     return (
-        <div className='cart-item-container'>
-            <img src={imageUrl} />
-            <div className='item-details'>
+        <CartItemContainer>
+            <Image src={imageUrl} />
+            <ItemDetails>
                 <span className='name'>{name}</span>
                 <span className='price'>{quantity} x ${price}</span>
-            </div>
-        </div> 
+            </ItemDetails>
+        </CartItemContainer> 
     )
 }
 
