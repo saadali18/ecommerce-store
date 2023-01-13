@@ -2,10 +2,8 @@ import { useState } from 'react';
 
 import {createAuthUserWithEmailAndPassword, createUserDocumentFromAuth} from '../../utils/firebase/firebase.utils'
 import FormInput from '../../components/form-input/form-input.component';
-import Button from '../../components/button/button.component'
+import {Button} from '../../components/button/button.component'
 import './sign-up.styles.scss';
-
-import {UserContext} from '../../contexts/user.context'
 
 const defaultFormFields = {
     displayName: '',
@@ -20,10 +18,8 @@ const SignUp = () => {
 
     const handleSubmit = async (event) => {
         event.preventDefault();
-        if (password != confirmPassword) 
+        if (password !== confirmPassword) 
         {
-            console.log(password)
-            console.log(confirmPassword)
             alert("password and confirm password do not match")
             return
         }
