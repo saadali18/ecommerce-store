@@ -23,17 +23,13 @@ export const CartDropdownContainer = styled.div`
 `
 
 export const EmptyMessage = styled.span`
-  .empty-message {
     font-size: 18px;
     margin: 50px auto;
-  }
 ` 
- export const CartItems = styled.div`
-  .cart-items {
+export const CartItems = styled.div`
     height: 240px;
     display: flex;
     flex-direction: column;
-    overflow: scroll;
-  }
+    overflow-y: scroll;
  
 `
